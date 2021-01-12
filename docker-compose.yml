@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:13
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - ./postgres-data:/var/lib/postgresql/data/
     ports:
       - 5432:5432
     environment:
@@ -21,4 +21,4 @@ services:
       - db
 
 volumes:
-  postgres_data:
+  postgres-data:
